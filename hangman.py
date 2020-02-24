@@ -18,7 +18,7 @@ while True:
     # Variables
     gameContinue = True
     lettersFound = 0
-    health = 7
+    health = 10
 
     # Choose word and make result list with same length
     wordStr = RandomWords().get_random_word()
@@ -39,7 +39,7 @@ while True:
 
         # Checks if letter is in the word or has already been used
         if letterInput in usedLetter:
-            print("Already used that letter fam")
+            print("You already tried that letter")
         elif letterInput in wordLst:
             letterIndex = wordLst.index(letterInput)
             resultLst[letterIndex] = letterInput
@@ -49,7 +49,7 @@ while True:
         else:
             health -= 1
             usedLetter.append(letterInput)
-            print("OOF, the word does not contain the letter '" + letterInput + "'")
+            print("No, the word does not contain the letter '" + letterInput + "'")
             print("Health left: " + str(health))
 
         # Check if game has ended
@@ -58,7 +58,7 @@ while True:
             print("The word was: " + wordStr)
             gameContinue = False
         elif health == 0:
-            print("\nlmao you lost fucking noob")
+            print("\nYou lost!")
             print("The word was: " + wordStr)
             gameContinue = False
         else:
