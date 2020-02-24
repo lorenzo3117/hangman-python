@@ -21,7 +21,7 @@ while True:
     health = 10
 
     # Choose word and make result list with same length
-    wordStr = RandomWords().get_random_word()
+    wordStr = RandomWords().get_random_word(hasDictionaryDef="true")
     wordLst  = list(wordStr)
     resultLst = []
     usedLetter = []
